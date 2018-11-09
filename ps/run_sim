@@ -1,0 +1,136 @@
+#!/bin/bash
+
+
+echo "Select Simulation State Directory:"
+./ps/directory_select "base/states/" 1
+SIM_PATH="$( cat coms.txt )"
+SIM="$( basename $SIM_PATH )"
+echo "Selected FIle: $SIM_PATH"
+
+echo "Select Simulation State Directory:"
+./ps/directory_select $SIM_PATH 1
+STATE_PATH="$( cat coms.txt )"
+echo "Selected FIle: $STATE_PATH"
+
+./ps/file_select "base/procs/" ".mdp"
+PROC="$( cat coms.txt )"
+echo "Selected FIle: $PROC"
+
+echo "Enter New State Name:"
+read NEW_STATE
+
+mkdir ${SIM_PATH}/${NEW_STATE}
+mkdir ${SIM_PATH}/${NEW_STATE}/bin
+
+
+gmx grompp -maxwarn 2 -f $PROC -c ${STATE_PATH}/${SIM}.gro -p ${SIM_PATH}/topol.top -o ${STATE_PATH}/bin/run.tpr
+
+#Copy over topol.top
+cp ${SIM_PATH}/topol.top ${STATE_PATH}/bin/topol.top
+
+gmx mdrun -v -deffnm ${STATE_PATH}/bin/run
+
+
+#Move over results
+#touch ${SIM_PATH}/${NEW_STATE}/${SIM}.edr
+mv ${STATE_PATH}/bin/run.edr ${SIM_PATH}/${NEW_STATE}/${SIM}.edr
+#touch ${NEW_STATE}/${SIM}.gro
+mv ${STATE_PATH}/bin/run.gro ${SIM_PATH}/${NEW_STATE}/${SIM}.gro
+#touch ${NEW_STATE}/${SIM}.trr
+mv ${STATE_PATH}/bin/run.trr ${SIM_PATH}/${NEW_STATE}/${SIM}.trr
+
+
+
+
+exit
+
+
+
+#Get Name of itp file (is this even necessary?)
+./ps/file_select "base/mols/" ".itp"
+ITP="$( cat coms.txt )"
+echo "Selected FIle: $ITP"
+
+
+#Get name of pdb file
+./ps/file_select "base/mols" ".pdb"
+PDB="$( cat coms.txt )"
+echo "Selected FIle: $PDB"
+
+
+#Get itp molecule tag
+echo "Enter .itp molecule tag:"
+read ITP_TAG
+
+
+#Get Amount of Molecules
+echo "Enter amount of molecules:"
+read MOL_AMOUNT
+
+
+#Get Box Size (pure.inp units)
+echo "Enter Box Size (usually 50)"
+read BOX_SIZE
+
+
+#Get Setup and Simulation Name
+echo "Enter Setup Name"
+read NAME
+
+
+#Create Files and Dirs for Setup
+mkdir base/setups/${NAME}
+touch base/setups/${NAME}/${NAME}.pdb
+
+
+#Write pure.inp
+echo "tolerance 2.0
+filetype pdb
+output base/setups/${NAME}/${NAME}.pdb
+
+structure $PDB
+  number $MOL_AMOUNT
+  inside box 0. 0. 0. ${BOX_SIZE}.0 ${BOX_SIZE}.0 ${BOX_SIZE}.0
+end structure" > base/setups/${NAME}/pure.inp
+
+
+#Use packmol
+./tools/packmol/packmol < base/setups/${NAME}/pure.inp
+
+
+#Pause
+echo "Packmol completed. Convert to Simulation State? Ctrl-C if not."
+read NOTHING
+
+
+#Make Dirs and Files for State
+mkdir base/states/${NAME}
+mkdir base/states/${NAME}/initial
+touch base/states/${NAME}/initial/${NAME}.gro
+
+
+#Convert packmol file to .gro
+gmx editconf -f base/setups/${NAME}/${NAME}.pdb -o base/states/${NAME}/initial/${NAME}.gro
+sed -i '$ d' base/states/${NAME}/initial/${NAME}.gro #Remove last line from gro.file that will be the box size 0.0000
+BOX_SIZE_NEW="$((BOX_SIZE / 10))" #Calculate new box size
+echo "   ${BOX_SIZE_NEW}.00000   ${BOX_SIZE_NEW}.00000   ${BOX_SIZE_NEW}.00000" >> base/states/${NAME}/initial/${NAME}.gro
+
+
+#Create topol.top
+touch base/states/${NAME}/topol.top
+
+
+#Write topol.top file
+echo "#include \"gromos53a6.ff/forcefield.itp\"
+#include \"${ITP}\"
+
+[ system ]
+${NAME}
+
+[ molecules ]
+$ITP_TAG	$MOL_AMOUNT" > base/states/${NAME}/topol.top
+
+
+
+
+

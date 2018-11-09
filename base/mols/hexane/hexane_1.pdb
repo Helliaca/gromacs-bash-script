@@ -1,0 +1,12 @@
+HEADER    UNCLASSIFIED                            12-Oct-15
+TITLE     ALL ATOM STRUCTURE FOR MOLECULE DEF                                   
+AUTHOR    GROMOS AUTOMATIC TOPOLOGY BUILDER REVISION 2015-10-12 12:42:39
+AUTHOR   2  http://compbio.biosci.uq.edu.au/atb
+HETATM    1   C1 HEX    0      -3.225  -0.219  -0.001  1.00  0.00           C
+HETATM    2   C2 HEX    0      -1.896   0.543   0.001  1.00  0.00           C
+HETATM    3   C3 HEX    0      -0.668  -0.378  -0.000  1.00  0.00           C
+HETATM    4   C4 HEX    0       0.668   0.378   0.001  1.00  0.00           C
+HETATM    5   C5 HEX    0       1.896  -0.543   0.000  1.00  0.00           C
+HETATM    6   C6 HEX    0       3.225   0.219  -0.002  1.00  0.00           C
+END
+

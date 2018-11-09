@@ -1,0 +1,37 @@
+define              =  -DFLEXIBLE
+; Run control
+integrator               = steep 
+nsteps                   = 200000
+; EM criteria and other stuff
+emtol                    = 1000
+emstep                   = 0.01
+niter                    = 20
+nbfgscorr                = 10
+; Output control
+nstlog                   = 1
+nstenergy                = 1
+; Neighborsearching and short-range nonbonded interactions
+nstlist                  = 1
+ns_type                  = grid
+pbc                      = xyz
+rlist                    = 0.9
+; Electrostatics
+coulombtype              = reaction-field
+rcoulomb                 = 0.9
+epsilon_r                = 1
+epsilon_rf               = 80
+; van der Waals
+vdw-type                 = cut-off
+rvdw-switch              = 0
+rvdw                     = 0.9
+; Apply long range dispersion corrections for Energy and Pressure
+DispCorr                  = EnerPres
+; Spacing for the PME/PPPM FFT grid
+fourierspacing           = 0.12
+; EWALD/PME/PPPM parameters
+pme_order                = 6
+ewald_rtol               = 1e-06
+epsilon_surface          = 0
+optimize_fft             = no
+; Temperature and pressure coupling are off during EM
+gen_vel                  = yes 

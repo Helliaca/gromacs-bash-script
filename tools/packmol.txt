@@ -1,0 +1,2 @@
+To run, make sure that packmol is installed in a folder called 'packmol' in this directory.
+Otherwise change the packmol path in the new_setup bash script.

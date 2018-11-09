@@ -1,0 +1,8 @@
+#include "gromos53a6.ff/forcefield.itp"
+#include "/home/mi/benjaminkahl/sm_bash/base/mols/hexane/hexane.itp"
+
+[ system ]
+hexane_500
+
+[ molecules ]
+HEX	500

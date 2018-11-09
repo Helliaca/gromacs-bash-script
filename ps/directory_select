@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DIR=$1
+DEPTH=$2
+echo "Please select a Disrectory from $DIR:"
+options=( $(find $DIR -maxdepth $DEPTH -type d ! -path $DIR) )
+
+select opt in "${options[@]}" "Quit" ; do 
+    if (( REPLY == 1 + ${#options[@]} )) ; then
+        exit
+
+    elif (( REPLY > 0 && REPLY <= ${#options[@]} )) ; then
+        echo  "$opt" > coms.txt
+        break
+
+    else
+        echo "Invalid option. Try another one."
+    fi
+done

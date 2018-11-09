@@ -1,0 +1,20 @@
+#!/bin/bash
+
+msg='Enter your choice'
+options=("Setup new Simulation" "Run Simulation" "Option3")
+
+echo $msg
+select opt in "${options[@]}"
+do
+case $opt in
+	"Setup new Simulation")
+		"ps/new_sim"
+		;;
+	"Run Simulation")
+		"ps/run_sim"
+		;;
+	*)
+		echo "invalid in"
+		;;
+esac
+done

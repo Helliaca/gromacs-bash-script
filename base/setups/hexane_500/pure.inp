@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output base/setups/hexane_500/hexane_500.pdb
+
+structure base/mols/hexane/hexane_1.pdb
+  number 500
+  inside box 0. 0. 0. 50.0 50.0 50.0
+end structure
