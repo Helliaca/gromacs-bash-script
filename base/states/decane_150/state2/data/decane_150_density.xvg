@@ -1,0 +1,74 @@
+# This file was created Mon Nov 12 14:07:22 2018
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/decane_150/state2/decane_150.xtc -s base/states/decane_150/state2/decane_150.tpr -o base/states/decane_150/state2/data/decane_150_density
+# gmx density is part of G R O M A C S:
+#
+# GROtesk MACabre and Sinister
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0377447          566.219
+    0.113234           584.33
+    0.188724          538.865
+    0.264213          532.811
+    0.339703          523.986
+    0.415192          539.727
+    0.490681          569.424
+    0.566171          578.199
+     0.64166          611.801
+     0.71715           608.72
+    0.792639           561.48
+    0.868129          554.939
+    0.943618           577.32
+     1.01911          600.136
+      1.0946          595.414
+     1.17009          539.675
+     1.24558          494.563
+     1.32107          495.224
+     1.39655          511.366
+     1.47204          527.263
+     1.54753          510.693
+     1.62302          514.359
+     1.69851          484.216
+       1.774          495.898
+     1.84949          492.983
+     1.92498          486.236
+     2.00047          459.759
+     2.07596          430.747
+     2.15145          431.318
+     2.22694          417.027
+     2.30243          422.059
+     2.37792          457.976
+     2.45341          478.112
+      2.5289          466.597
+     2.60439          462.814
+     2.67988           463.83
+     2.75536          464.321
+     2.83085          502.622
+     2.90634          522.991
+     2.98183          527.146
+     3.05732          499.039
+     3.13281          469.099
+      3.2083          447.293
+     3.28379          451.776
+     3.35928           492.94
+     3.43477          524.589
+     3.51026          508.681
+     3.58575          491.592
+     3.66124          466.804
+     3.73673          492.438

@@ -1,0 +1,74 @@
+# This file was created Mon Nov 12 15:02:03 2018
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/decane_500/after_npt/decane_500.xtc -s base/states/decane_500/after_npt/decane_500.tpr -o base/states/decane_500/after_npt/data/decane_500_density
+# gmx density is part of G R O M A C S:
+#
+# Good ROcking Metal Altar for Chronical Sinners
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0558733          614.132
+     0.16762          614.153
+    0.279367          631.947
+    0.391113          634.168
+     0.50286          625.124
+    0.614607          624.379
+    0.726353          636.813
+      0.8381          632.517
+    0.949847          628.806
+     1.06159          633.868
+     1.17334          633.677
+     1.28509              633
+     1.39683          633.624
+     1.50858          631.108
+     1.62033          631.712
+     1.73207          629.306
+     1.84382          628.608
+     1.95557          634.868
+     2.06731          634.863
+     2.17906          628.336
+     2.29081           624.64
+     2.40255          624.979
+      2.5143          632.511
+     2.62605          636.155
+     2.73779           628.89
+     2.84954          626.651
+     2.96129            622.8
+     3.07303          628.245
+     3.18478          626.645
+     3.29653          626.109
+     3.40827          619.693
+     3.52002          630.505
+     3.63177          633.057
+     3.74351          635.313
+     3.85526          628.993
+     3.96701          631.575
+     4.07875          635.664
+      4.1905          635.149
+     4.30225          629.582
+     4.41399          628.152
+     4.52574          624.379
+     4.63749          629.395
+     4.74923          630.561
+     4.86098          628.732
+     4.97273          631.508
+     5.08447          631.038
+     5.19622          624.663
+     5.30797          621.461
+     5.41971          626.154
+     5.53146          631.533

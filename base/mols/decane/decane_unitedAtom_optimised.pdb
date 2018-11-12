@@ -1,0 +1,16 @@
+﻿HEADER    UNCLASSIFIED                            09-Nov-18
+TITLE     UNITED ATOM STRUCTURE FOR MOLECULE D10                                
+AUTHOR    GROMOS AUTOMATIC TOPOLOGY BUILDER REVISION 2018-11-06 12:13:14
+AUTHOR   2  http://compbio.biosci.uq.edu.au/atb
+HETATM    1   C1 0CUN    0      -5.780   0.295  -0.001  1.00  0.00           C
+HETATM    2   C2 0CUN    0      -4.484  -0.522   0.001  1.00  0.00           C
+HETATM    3   C3 0CUN    0      -3.219   0.347   0.001  1.00  0.00           C
+HETATM    4   C4 0CUN    0      -1.916  -0.464   0.001  1.00  0.00           C
+HETATM    5   C5 0CUN    0      -0.651   0.406   0.000  1.00  0.00           C
+HETATM    6   C6 0CUN    0       0.651  -0.406  -0.000  1.00  0.00           C
+HETATM    7   C7 0CUN    0       1.916   0.464  -0.001  1.00  0.00           C
+HETATM    8   C8 0CUN    0       3.219  -0.347  -0.001  1.00  0.00           C
+HETATM    9   C9 0CUN    0       4.484   0.522  -0.001  1.00  0.00           C
+HETATM   10  C10 0CUN    0       5.780  -0.295   0.001  1.00  0.00           C
+END
+

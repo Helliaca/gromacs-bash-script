@@ -1,0 +1,31 @@
+#!/bin/bash
+
+echo "Select Simulation State Directory:"
+./ps/directory_select "base/states/" 1
+SIM_PATH="$( cat coms.txt )"
+SIM="$( basename $SIM_PATH )"
+echo "Selected FIle: $SIM_PATH"
+
+echo "Select Simulation State Directory:"
+./ps/directory_select $SIM_PATH 1
+STATE_PATH="$( cat coms.txt )"
+echo "Selected FIle: $STATE_PATH"
+
+mkdir ${STATE_PATH}/data
+
+echo "Run what?"
+options=("Gmx Energy" "Gmx Density")
+select opt in "${options[@]}"
+do
+case $opt in
+	"Gmx Energy")
+		gmx energy -f ${STATE_PATH}/${SIM}.edr -o ${STATE_PATH}/data/${SIM}_energy
+		;;
+	"Gmx Density")
+		gmx density -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_density
+		;;
+	*)
+		echo "invalid in"
+		;;
+esac
+done

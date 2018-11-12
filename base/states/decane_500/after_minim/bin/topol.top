@@ -1,0 +1,8 @@
+#include "gromos53a6.ff/forcefield.itp"
+#include "/home/mi/benjaminkahl/sm_bash/base/mols/decane/decane_unitedAtom.itp"
+
+[ system ]
+decane_500
+
+[ molecules ]
+0CUN	500

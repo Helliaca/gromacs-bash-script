@@ -1,0 +1,27 @@
+#!/bin/bash
+
+./ps/directory_select "base/states/" 1
+SIM_PATH="$( cat coms.txt )"
+SIM="$( basename $SIM_PATH )"
+./ps/directory_select $SIM_PATH 1
+STATE_PATH="$( cat coms.txt )"
+
+echo "Run what?"
+options=("Xmgrace Energy" "Xmgrace Density" "Vdm")
+select opt in "${options[@]}"
+do
+case $opt in
+	"Vdm")
+		vmd ${STATE_PATH}/${SIM}.gro
+		;;
+	"Xmgrace Energy")
+		xmgrace ${STATE_PATH}/data/${SIM}_energy.xvg
+		;;
+	"Xmgrace Density")
+		xmgrace ${STATE_PATH}/data/${SIM}_density.xvg
+		;;
+	*)
+		echo "invalid in"
+		;;
+esac
+done

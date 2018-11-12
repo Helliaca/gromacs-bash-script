@@ -3,8 +3,7 @@ integrator               = sd
 ; Start time and timestep in ps
 tinit                    = 0
 dt                       = 0.002
-;nsteps                   = 1000000
-nsteps                   = 100000
+nsteps                   = 1000000
 ; For exact run continuation or redoing part of a run
 init_step                = 0
 ; mode for center of mass motion removal
@@ -72,8 +71,8 @@ tc-grps                  = System
 tau_t                    = 0.1
 ref_t                    = 298
 ; Pressure coupling     
-Pcoupl                   =  Berendsen
-;Pcoupl                   = Parrinello-Rahman
+;Pcoupl                   =  Berendsen
+Pcoupl                   = Parrinello-Rahman
 Pcoupltype               = isotropic
 ; Time constant (ps), compressibility (1/bar) and reference P (bar)
 tau_p                    = 2.0
