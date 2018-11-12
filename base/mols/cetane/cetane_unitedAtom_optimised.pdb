@@ -1,0 +1,22 @@
+﻿HEADER    UNCLASSIFIED                            09-Nov-18
+TITLE     UNITED ATOM STRUCTURE FOR MOLECULE LIG                                
+AUTHOR    GROMOS AUTOMATIC TOPOLOGY BUILDER REVISION 2018-11-06 12:13:14
+AUTHOR   2  http://compbio.biosci.uq.edu.au/atb
+HETATM    1   C1 _MVT    0       9.628   0.342   0.006  1.00  0.00           C
+HETATM    2   C2 _MVT    0       8.343  -0.494   0.002  1.00  0.00           C
+HETATM    3   C3 _MVT    0       7.066   0.357  -0.002  1.00  0.00           C
+HETATM    4   C4 _MVT    0       5.775  -0.472  -0.003  1.00  0.00           C
+HETATM    5   C5 _MVT    0       4.498   0.380  -0.005  1.00  0.00           C
+HETATM    6   C6 _MVT    0       3.206  -0.449  -0.003  1.00  0.00           C
+HETATM    7   C7 _MVT    0       1.930   0.403  -0.004  1.00  0.00           C
+HETATM    8   C8 _MVT    0       0.638  -0.426  -0.000  1.00  0.00           C
+HETATM    9   C9 _MVT    0      -0.638   0.426   0.000  1.00  0.00           C
+HETATM   10  C10 _MVT    0      -1.930  -0.403   0.004  1.00  0.00           C
+HETATM   11  C11 _MVT    0      -3.206   0.449   0.003  1.00  0.00           C
+HETATM   12  C12 _MVT    0      -4.498  -0.380   0.005  1.00  0.00           C
+HETATM   13  C13 _MVT    0      -5.775   0.472   0.003  1.00  0.00           C
+HETATM   14  C14 _MVT    0      -7.066  -0.357   0.002  1.00  0.00           C
+HETATM   15  C15 _MVT    0      -8.343   0.494  -0.002  1.00  0.00           C
+HETATM   16  C16 _MVT    0      -9.628  -0.342  -0.006  1.00  0.00           C
+END
+
