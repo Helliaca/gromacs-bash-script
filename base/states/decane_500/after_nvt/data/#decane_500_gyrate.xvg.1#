@@ -1,4 +1,4 @@
-# This file was created Mon Nov 19 14:44:13 2018
+# This file was created Mon Nov 12 16:01:46 2018
 # Created by:
 #                      :-) GROMACS - gmx gyrate, 2016.1 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx gyrate -f base/states/decane_500/after_nvt/decane_500.xtc -s base/states/decane_500/after_nvt/decane_500.tpr -o base/states/decane_500/after_nvt/data/decane_500_gyrate
 # gmx gyrate is part of G R O M A C S:
 #
-# Good ROcking Metal Altar for Chronical Sinners
+# GROup of MAchos and Cynical Suckers
 #
 @    title "Radius of gyration (total and around axes)"
 @    xaxis  label "Time (ps)"

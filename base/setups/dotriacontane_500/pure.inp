@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output base/setups/dotriacontane_500/dotriacontane_500.pdb
+
+structure base/mols/dotriacontane/dotriacontane_unitedAtom_optimised.pdb
+  number 500
+  inside box 0. 0. 0. 100.0 100.0 100.0
+end structure
