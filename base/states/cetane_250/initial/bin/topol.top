@@ -1,0 +1,8 @@
+#include "gromos53a6.ff/forcefield.itp"
+#include "/home/mi/benjaminkahl/sm_bash/base/mols/cetane/cetane_unitedAtom.itp"
+
+[ system ]
+cetane_250
+
+[ molecules ]
+_MVT	250

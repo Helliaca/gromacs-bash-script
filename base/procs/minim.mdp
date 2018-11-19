@@ -1,7 +1,7 @@
 define              =  -DFLEXIBLE
 ; Run control
 integrator               = steep 
-nsteps                   = 200000
+nsteps                   = 400000
 ; EM criteria and other stuff
 emtol                    = 1000
 emstep                   = 0.01

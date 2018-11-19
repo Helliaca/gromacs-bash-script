@@ -1,0 +1,74 @@
+# This file was created Mon Nov 19 14:00:52 2018
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/cetane_250/after_npt/cetane_250.xtc -s base/states/cetane_250/after_npt/cetane_250.tpr -o base/states/cetane_250/after_npt/data/cetane_250_density
+# gmx density is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0507521          665.167
+    0.152256          671.762
+    0.253761          686.366
+    0.355265          697.843
+    0.456769          694.221
+    0.558273          690.932
+    0.659777          701.168
+    0.761282          711.532
+    0.862786          717.115
+     0.96429          716.194
+     1.06579          703.812
+      1.1673          706.385
+      1.2688          722.864
+     1.37031          728.395
+     1.47181           711.22
+     1.57332          716.265
+     1.67482          720.774
+     1.77632          721.297
+     1.87783          706.874
+     1.97933          707.672
+     2.08084          713.672
+     2.18234          720.871
+     2.28384          714.672
+     2.38535          717.007
+     2.48685          725.722
+     2.58836          720.416
+     2.68986           710.94
+     2.79137          703.143
+     2.89287          715.759
+     2.99437          721.499
+     3.09588          718.225
+     3.19738          705.548
+     3.29889          707.928
+     3.40039          720.532
+      3.5019          726.568
+      3.6034           717.84
+      3.7049          714.872
+     3.80641          714.269
+     3.90791          725.189
+     4.00942          718.395
+     4.11092          698.475
+     4.21242           687.47
+     4.31393          685.361
+     4.41543          709.085
+     4.51694          715.945
+     4.61844          694.927
+     4.71995          684.544
+     4.82145          690.639
+     4.92295          695.847
+     5.02446          676.953
