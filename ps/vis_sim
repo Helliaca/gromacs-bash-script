@@ -7,12 +7,15 @@ SIM="$( basename $SIM_PATH )"
 STATE_PATH="$( cat coms.txt )"
 
 echo "Run what?"
-options=("Xmgrace Energy" "Xmgrace Density" "Vdm")
+options=("Xmgrace Energy" "Xmgrace Density" "Vdm State" "Vdm Movie")
 select opt in "${options[@]}"
 do
 case $opt in
-	"Vdm")
+	"Vdm State")
 		vmd ${STATE_PATH}/${SIM}.gro
+		;;
+	"Vdm Movie")
+		vmd ${STATE_PATH}/${SIM}.gro ${STATE_PATH}/${SIM}.xtc
 		;;
 	"Xmgrace Energy")
 		xmgrace ${STATE_PATH}/data/${SIM}_energy.xvg

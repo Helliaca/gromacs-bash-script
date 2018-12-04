@@ -49,6 +49,8 @@ structure $PDB
   inside box 0. 0. 0. ${BOX_SIZE}.0 ${BOX_SIZE}.0 ${BOX_SIZE}.0
 end structure" > base/setups/${NAME}/pure.inp
 
+echo "You may edit pure.inp now. Press enter to run packmol."
+read NOTHING
 
 #Use packmol
 ./tools/packmol/packmol < base/setups/${NAME}/pure.inp

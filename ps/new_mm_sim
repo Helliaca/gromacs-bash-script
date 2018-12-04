@@ -1,0 +1,98 @@
+#!/bin/bash
+
+#Get amount of different molecules:
+echo "Enter amount of different molecules:"
+read NUM_MOLS
+
+#Get Setup and Simulation Name
+echo "Enter Setup Name"
+read NAME
+
+#Create Files and Dirs for Setup
+mkdir base/setups/${NAME}
+touch base/setups/${NAME}/${NAME}.pdb
+
+#Get Box Size (pure.inp units)
+echo "Enter Box Size (usually 50)"
+read BOX_SIZE
+
+
+#Write pure.inp
+echo "tolerance 2.0
+filetype pdb
+output base/setups/${NAME}/${NAME}.pdb" > base/setups/${NAME}/pure.inp
+
+for MOL in `seq $NUM_MOLS`;
+do
+	echo ">> MOLECULE NR. $MOL"
+
+	#Get Name of itp file (is this even necessary?)
+	./ps/file_select "base/mols/" ".itp"
+	ITP="$( cat coms.txt )"
+	ITP="$( realpath $ITP )"
+	echo "Selected FIle: $ITP"
+
+
+	#Get name of pdb file
+	./ps/file_select "base/mols" ".pdb"
+	PDB="$( cat coms.txt )"
+	echo "Selected FIle: $PDB"
+
+
+	#Get itp molecule tag
+	echo "Enter .itp molecule tag:"
+	read ITP_TAG
+
+
+	#Get Amount of Molecules
+	echo "Enter amount of molecules:"
+	read MOL_AMOUNT
+
+	echo -e "\nstructure $PDB\n  number $MOL_AMOUNT\n  inside box 0. 0. 0. ${BOX_SIZE}.0 ${BOX_SIZE}.0 ${BOX_SIZE}.0\nend structure" >> base/setups/${NAME}/pure.inp
+
+done
+
+echo "You may edit pure.inp now. Press enter to run packmol."
+read NOTHING
+
+#Use packmol
+./tools/packmol/packmol < base/setups/${NAME}/pure.inp
+
+
+#Pause
+echo "Packmol completed. Convert to Simulation State? Ctrl-C if not."
+read NOTHING
+
+
+#Make Dirs and Files for State
+mkdir base/states/${NAME}
+mkdir base/states/${NAME}/initial
+mkdir base/states/${NAME}/initial/bin
+touch base/states/${NAME}/initial/${NAME}.gro
+
+
+#Convert packmol file to .gro
+gmx editconf -f base/setups/${NAME}/${NAME}.pdb -o base/states/${NAME}/initial/${NAME}.gro
+sed -i '$ d' base/states/${NAME}/initial/${NAME}.gro #Remove last line from gro.file that will be the box size 0.0000
+BOX_SIZE_NEW="$((BOX_SIZE / 10))" #Calculate new box size
+echo "   ${BOX_SIZE_NEW}.00000   ${BOX_SIZE_NEW}.00000   ${BOX_SIZE_NEW}.00000" >> base/states/${NAME}/initial/${NAME}.gro
+
+
+#Create topol.top
+touch base/states/${NAME}/topol.top
+
+
+#Write topol.top file
+echo "#include \"gromos53a6.ff/forcefield.itp\"
+#include \"${ITP}\"
+
+[ system ]
+${NAME}
+
+[ molecules ]
+$ITP_TAG	$MOL_AMOUNT" > base/states/${NAME}/topol.top
+
+
+
+
+

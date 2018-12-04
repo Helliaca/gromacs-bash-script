@@ -14,7 +14,7 @@ echo "Selected FIle: $STATE_PATH"
 mkdir ${STATE_PATH}/data
 
 echo "Run what?"
-options=("Gmx Energy" "Gmx Density" "Gyration Radius")
+options=("Gmx Energy" "Gmx Density" "Gyration Radius" "Polystat")
 select opt in "${options[@]}"
 do
 case $opt in
@@ -26,6 +26,9 @@ case $opt in
 		;;
 	"Gyration Radius")
 		gmx gyrate -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_gyrate
+		;;
+	"Polystat")
+		gmx polystat -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_polystat
 		;;
 	*)
 		echo "invalid in"
