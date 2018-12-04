@@ -1,0 +1,10 @@
+﻿HEADER    UNCLASSIFIED                            17-Nov-18
+TITLE     UNITED ATOM STRUCTURE FOR MOLECULE MOL                                
+AUTHOR    GROMOS AUTOMATIC TOPOLOGY BUILDER REVISION 2018-11-06 12:13:14
+AUTHOR   2  http://compbio.biosci.uq.edu.au/atb
+HETATM    1   C1 OZL8    0       1.282   0.256   0.015  1.00  0.00           C
+HETATM    2   C2 OZL8    0      -0.004  -0.563  -0.032  1.00  0.00           C
+HETATM    3   O1 OZL8    0      -1.182   0.244   0.061  1.00  0.00           O
+HETATM    4   H6 OZL8    0      -1.199   0.816  -0.724  1.00  0.00           H
+END
+

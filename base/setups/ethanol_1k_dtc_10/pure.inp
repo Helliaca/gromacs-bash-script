@@ -1,0 +1,13 @@
+tolerance 2.0
+filetype pdb
+output base/setups/ethanol_1k_dtc_10/ethanol_1k_dtc_10.pdb
+
+structure base/mols/ethanol/ethanol_unitedAtom_optimised.pdb
+  number 1000
+  inside box 0. 0. 0. 80.0 80.0 80.0
+end structure
+
+structure base/mols/dotriacontane/dotriacontane_unitedAtom_optimised.pdb
+  number 10
+  inside box 0. 0. 0. 80.0 80.0 80.0
+end structure
