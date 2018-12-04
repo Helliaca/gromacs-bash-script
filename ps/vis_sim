@@ -7,7 +7,7 @@ SIM="$( basename $SIM_PATH )"
 STATE_PATH="$( cat coms.txt )"
 
 echo "Run what?"
-options=("Xmgrace Energy" "Xmgrace Density" "Vdm State" "Vdm Movie")
+options=("Xmgrace Energy" "Xmgrace Density" "Vdm State" "Vdm Movie" "Trjconv")
 select opt in "${options[@]}"
 do
 case $opt in
@@ -22,6 +22,9 @@ case $opt in
 		;;
 	"Xmgrace Density")
 		xmgrace ${STATE_PATH}/data/${SIM}_density.xvg
+		;;
+	"Trjconv")
+		gmx trjconv -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.gro -o ${STATE_PATH}/${SIM}.xtc -pbc whole
 		;;
 	*)
 		echo "invalid in"
