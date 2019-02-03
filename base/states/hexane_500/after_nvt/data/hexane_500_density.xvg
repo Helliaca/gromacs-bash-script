@@ -1,0 +1,74 @@
+# This file was created Sun Feb  3 18:49:33 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/hexane_500/after_nvt/hexane_500.xtc -s base/states/hexane_500/after_nvt/hexane_500.tpr -o base/states/hexane_500/after_nvt/data/hexane_500_density
+# gmx density is part of G R O M A C S:
+#
+# Great Red Owns Many ACres of Sand 
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0486779          635.225
+    0.146034          635.144
+     0.24339          593.438
+    0.340745          594.641
+    0.438101          618.519
+    0.535457          630.233
+    0.632813           622.45
+    0.730169          631.359
+    0.827524          617.573
+     0.92488          600.683
+     1.02224          594.123
+     1.11959          598.299
+     1.21695           619.38
+      1.3143          624.476
+     1.41166          622.245
+     1.50901          635.587
+     1.60637          613.173
+     1.70373          596.159
+     1.80108          598.846
+     1.89844          629.072
+     1.99579          648.048
+     2.09315          631.305
+     2.19051          603.112
+     2.28786            606.9
+     2.38522          624.184
+     2.48257          633.458
+     2.57993          639.752
+     2.67728          611.799
+     2.77464           615.44
+       2.872          602.403
+     2.96935          616.553
+     3.06671           639.74
+     3.16406          640.432
+     3.26142          608.628
+     3.35878          610.429
+     3.45613          624.194
+     3.55349          638.326
+     3.65084           632.77
+      3.7482          633.061
+     3.84555           619.67
+     3.94291          626.629
+     4.04027          632.234
+     4.13762          608.628
+     4.23498          627.696
+     4.33233          613.138
+     4.42969          612.002
+     4.52704          625.271
+      4.6244          623.456
+     4.72176          629.002
+     4.81911          627.414

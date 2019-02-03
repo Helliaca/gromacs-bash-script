@@ -22,13 +22,13 @@ case $opt in
 		gmx energy -f ${STATE_PATH}/${SIM}.edr -o ${STATE_PATH}/data/${SIM}_energy
 		;;
 	"Gmx Density")
-		gmx density -f ${STATE_PATH}/${SIM}.trr -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_density
+		gmx density -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_density
 		;;
 	"Gyration Radius")
-		gmx gyrate -f ${STATE_PATH}/${SIM}.trr -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_gyrate
+		gmx gyrate -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_gyrate
 		;;
 	"Polystat")
-		gmx polystat -f ${STATE_PATH}/${SIM}.trr -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_polystat
+		gmx polystat -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_polystat
 		;;
 	*)
 		echo "invalid in"
