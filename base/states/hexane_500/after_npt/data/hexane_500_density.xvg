@@ -1,0 +1,74 @@
+# This file was created Sun Feb  3 18:08:43 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/hexane_500/after_npt/hexane_500.xtc -s base/states/hexane_500/after_npt/hexane_500.tpr -o base/states/hexane_500/after_npt/data/hexane_500_density
+# gmx density is part of G R O M A C S:
+#
+# Great Red Oystrich Makes All Chemists Sane
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0486779           547.58
+    0.146034          543.861
+    0.243389           540.24
+    0.340745          543.527
+    0.438101          547.653
+    0.535457          545.881
+    0.632812          547.217
+    0.730168          546.328
+    0.827524          546.221
+     0.92488          541.564
+     1.02224          542.411
+     1.11959          550.152
+     1.21695          556.982
+      1.3143           551.48
+     1.41166          547.617
+     1.50901          543.299
+     1.60637          546.961
+     1.70373          556.023
+     1.80108          557.921
+     1.89844          552.337
+     1.99579          548.893
+     2.09315          552.701
+      2.1905          548.727
+     2.28786          550.592
+     2.38522          554.273
+     2.48257          550.509
+     2.57993          548.877
+     2.67728          551.981
+     2.77464          551.838
+     2.87199          549.331
+     2.96935          548.736
+     3.06671          554.415
+     3.16406           551.57
+     3.26142          545.658
+     3.35877          542.769
+     3.45613          549.091
+     3.55348          558.313
+     3.65084          552.301
+      3.7482          544.721
+     3.84555          545.044
+     3.94291          542.713
+     4.04026          549.549
+     4.13762          550.064
+     4.23498          550.991
+     4.33233          550.432
+     4.42969          546.622
+     4.52704          544.894
+      4.6244          546.838
+     4.72175           546.63
+     4.81911          550.147

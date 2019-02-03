@@ -1,4 +1,4 @@
-# This file was created Sun Feb  3 17:45:26 2019
+# This file was created Sun Feb  3 17:00:05 2019
 # Created by:
 #                      :-) GROMACS - gmx gyrate, 2016.1 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx gyrate -f base/states/hexane_500/after_minim/hexane_500.trr -s base/states/hexane_500/after_minim/hexane_500.tpr -o base/states/hexane_500/after_minim/data/hexane_500_gyrate
 # gmx gyrate is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Great Red Oystrich Makes All Chemists Sane
 #
 @    title "Radius of gyration (total and around axes)"
 @    xaxis  label "Time (ps)"
