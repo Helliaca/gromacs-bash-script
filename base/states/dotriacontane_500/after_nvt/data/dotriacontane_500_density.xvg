@@ -1,0 +1,74 @@
+# This file was created Sun Feb  3 21:01:44 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/dotriacontane_500/after_nvt/dotriacontane_500.xtc -s base/states/dotriacontane_500/after_nvt/dotriacontane_500.tpr -o base/states/dotriacontane_500/after_nvt/data/dotriacontane_500_density
+# gmx density is part of G R O M A C S:
+#
+# God Rules Over Mankind, Animals, Cosmos and Such
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+    0.078555          787.979
+    0.235665          725.009
+    0.392775          798.727
+    0.549885          777.081
+    0.706995          737.403
+    0.864105          794.888
+     1.02122          798.479
+     1.17833          778.025
+     1.33544           765.41
+     1.49255          772.631
+     1.64966          757.519
+     1.80677          773.722
+     1.96388          772.022
+     2.12099          769.528
+      2.2781           773.86
+      2.4352          773.948
+     2.59232          767.017
+     2.74943           762.97
+     2.90654          790.868
+     3.06365           782.08
+     3.22076          788.049
+     3.37787          770.132
+     3.53498           762.49
+     3.69209          793.571
+      3.8492          776.956
+     4.00631          740.098
+     4.16341          778.288
+     4.32053          773.229
+     4.47764          765.636
+     4.63475          810.031
+     4.79186          758.725
+     4.94897          782.014
+     5.10608          781.601
+     5.26319          739.564
+      5.4203          814.431
+      5.5774          767.577
+     5.73452          743.561
+     5.89163          820.141
+     6.04874          770.518
+     6.20585          768.861
+     6.36296          779.973
+     6.52007          775.307
+     6.67718          742.485
+     6.83429          784.358
+      6.9914          790.065
+     7.14851          739.424
+     7.30562          790.382
+     7.46273          779.025
+     7.61984          693.352
+     7.77695          773.541

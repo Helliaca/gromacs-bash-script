@@ -1,4 +1,4 @@
-# This file was created Mon Nov 19 14:15:20 2018
+# This file was created Sun Feb  3 21:02:14 2019
 # Created by:
 #                     :-) GROMACS - gmx density, 2016.1 (-:
 # 
@@ -9,7 +9,7 @@
 #   gmx density -f base/states/cetane_250/after_nvt/cetane_250.xtc -s base/states/cetane_250/after_nvt/cetane_250.tpr -o base/states/cetane_250/after_nvt/data/cetane_250_density
 # gmx density is part of G R O M A C S:
 #
-# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+# Gromacs Runs One Microsecond At Cannonball Speeds
 #
 @    title "Partial density"
 @    xaxis  label "Coordinate (nm)"

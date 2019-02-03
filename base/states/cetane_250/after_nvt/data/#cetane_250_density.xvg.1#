@@ -1,0 +1,74 @@
+# This file was created Mon Nov 19 14:15:20 2018
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/cetane_250/after_nvt/cetane_250.xtc -s base/states/cetane_250/after_nvt/cetane_250.tpr -o base/states/cetane_250/after_nvt/data/cetane_250_density
+# gmx density is part of G R O M A C S:
+#
+# Gallium Rubidium Oxygen Manganese Argon Carbon Silicon
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0507521          755.688
+    0.152256           735.22
+     0.25376          713.447
+    0.355265          718.405
+    0.456769          728.558
+    0.558273          708.097
+    0.659777          713.138
+    0.761281          727.813
+    0.862786          702.346
+     0.96429          701.351
+     1.06579          710.253
+      1.1673          729.325
+      1.2688           746.44
+     1.37031          755.421
+     1.47181          727.246
+     1.57332          720.812
+     1.67482          693.488
+     1.77632          701.204
+     1.87783          739.314
+     1.97933          714.918
+     2.08084          689.729
+     2.18234          692.761
+     2.28384          716.443
+     2.38535          713.795
+     2.48685          665.169
+     2.58836          691.252
+     2.68986          741.622
+     2.79137          734.949
+     2.89287          692.849
+     2.99437          690.911
+     3.09588          718.547
+     3.19738          734.597
+     3.29889          717.063
+     3.40039          699.045
+     3.50189          720.531
+      3.6034          767.905
+      3.7049          756.446
+     3.80641          721.773
+     3.90791          693.431
+     4.00942          716.955
+     4.11092          766.919
+     4.21242          732.046
+     4.31393          701.719
+     4.41543          689.448
+     4.51694          727.827
+     4.61844          747.523
+     4.71995          717.982
+     4.82145          697.138
+     4.92295          716.024
+     5.02446          740.634

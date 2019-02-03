@@ -1,0 +1,74 @@
+# This file was created Sun Feb  3 21:02:52 2019
+# Created by:
+#                     :-) GROMACS - gmx density, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx density -f base/states/decane_500/after_nvt/decane_500.xtc -s base/states/decane_500/after_nvt/decane_500.tpr -o base/states/decane_500/after_nvt/data/decane_500_density
+# gmx density is part of G R O M A C S:
+#
+# Gnomes, ROck Monsters And Chili Sauce
+#
+@    title "Partial density"
+@    xaxis  label "Coordinate (nm)"
+@    yaxis  label "Density (kg m\S-3\N)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "System"
+   0.0558733          674.483
+     0.16762          692.924
+    0.279366          681.346
+    0.391113          679.203
+     0.50286          690.146
+    0.614606          682.865
+    0.726353          658.232
+    0.838099          658.299
+    0.949846          687.657
+     1.06159          694.254
+     1.17334          669.816
+     1.28509          665.055
+     1.39683          682.263
+     1.50858           673.34
+     1.62033          678.963
+     1.73207          662.881
+     1.84382          681.284
+     1.95557          683.267
+     2.06731          678.577
+     2.17906          663.106
+     2.29081          679.526
+     2.40255          668.621
+      2.5143          673.052
+     2.62604          667.152
+     2.73779          678.796
+     2.84954          666.481
+     2.96128          682.903
+     3.07303          695.863
+     3.18478          686.223
+     3.29652          654.706
+     3.40827          678.716
+     3.52002           691.95
+     3.63176          683.137
+     3.74351          680.802
+     3.85526           673.33
+       3.967          670.292
+     4.07875          679.071
+      4.1905           699.31
+     4.30224          694.764
+     4.41399          666.505
+     4.52574          660.183
+     4.63748          676.451
+     4.74923           692.31
+     4.86098          688.393
+     4.97272          673.932
+     5.08447          679.342
+     5.19622           683.13
+     5.30796          680.831
+     5.41971          660.154
+     5.53146          660.117

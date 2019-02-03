@@ -1,0 +1,28 @@
+# This file was created Sun Feb  3 17:51:17 2019
+# Created by:
+#                      :-) GROMACS - gmx gyrate, 2016.1 (-:
+# 
+# Executable:   /usr/bin/gmx
+# Data prefix:  /usr
+# Working dir:  /home/mi/benjaminkahl/sm_bash
+# Command line:
+#   gmx gyrate -f base/states/decane_500/after_minim/decane_500.trr -s base/states/decane_500/after_minim/decane_500.tpr -o base/states/decane_500/after_minim/data/decane_500_gyrate
+# gmx gyrate is part of G R O M A C S:
+#
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
+#
+@    title "Radius of gyration (total and around axes)"
+@    xaxis  label "Time (ps)"
+@    yaxis  label "Rg (nm)"
+@TYPE xy
+@ view 0.15, 0.15, 0.75, 0.85
+@ legend on
+@ legend box on
+@ legend loctype view
+@ legend 0.78, 0.8
+@ legend length 2
+@ s0 legend "Rg"
+@ s1 legend "Rg\sX\N"
+@ s2 legend "Rg\sY\N"
+@ s3 legend "Rg\sZ\N"
+       812      2.3945     1.95785     1.96968     1.93765
