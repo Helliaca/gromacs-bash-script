@@ -1,15 +1,15 @@
-# This file was created Mon Feb  4 20:37:34 2019
+# This file was created Mon Feb  4 20:00:23 2019
 # Created by:
 #                      :-) GROMACS - gmx gyrate, 2016.1 (-:
 # 
 # Executable:   /usr/bin/gmx
 # Data prefix:  /usr
-# Working dir:  /home/mi/benjaminkahl/sm_bash/base/states/ethanol_1k_dtc_10/after_nvt_double
+# Working dir:  /home/mi/benjaminkahl/sm_bash
 # Command line:
-#   gmx gyrate -f ethanol_1k_dtc_10_o.xtc -s ethanol_1k_dtc_10.tpr -o data/ethanol_1k_dtc_10_gyrate.xvg
+#   gmx gyrate -f base/states/ethanol_1k_dtc_10/after_nvt_double/ethanol_1k_dtc_10.xtc -s base/states/ethanol_1k_dtc_10/after_nvt_double/ethanol_1k_dtc_10.tpr -o base/states/ethanol_1k_dtc_10/after_nvt_double/data/ethanol_1k_dtc_10_gyrate
 # gmx gyrate is part of G R O M A C S:
 #
-# Guyana Rwanda Oman Macau Angola Cameroon Senegal
+# Georgetown Riga Oslo Madrid Amsterdam Chisinau Stockholm
 #
 @    title "Radius of gyration (total and around axes)"
 @    xaxis  label "Time (ps)"
