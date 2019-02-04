@@ -1,0 +1,8 @@
+tolerance 2.0
+filetype pdb
+output base/setups/ethanol_500/ethanol_500.pdb
+
+structure base/mols/ethanol/ethanol_unitedAtom_optimised.pdb
+  number 500
+  inside box 0. 0. 0. 50.0 50.0 50.0
+end structure

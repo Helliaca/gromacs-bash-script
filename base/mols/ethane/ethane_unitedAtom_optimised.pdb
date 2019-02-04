@@ -1,0 +1,8 @@
+﻿HEADER    UNCLASSIFIED                            07-Nov-18
+TITLE     UNITED ATOM STRUCTURE FOR MOLECULE C                                  
+AUTHOR    GROMOS AUTOMATIC TOPOLOGY BUILDER REVISION 2018-11-06 12:13:14
+AUTHOR   2  http://compbio.biosci.uq.edu.au/atb
+HETATM    1   C1 4N3R    0      -0.765  -0.000   0.000  1.00  0.00           C
+HETATM    2   C2 4N3R    0       0.766   0.000  -0.000  1.00  0.00           C
+END
+

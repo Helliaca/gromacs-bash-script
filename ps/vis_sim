@@ -24,7 +24,7 @@ case $opt in
 		xmgrace ${STATE_PATH}/data/${SIM}_density.xvg
 		;;
 	"Trjconv")
-		gmx trjconv -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.gro -o ${STATE_PATH}/${SIM}.xtc -pbc whole
+		gmx trjconv -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/${SIM}.xtc -pbc whole
 		;;
 	*)
 		echo "invalid in"

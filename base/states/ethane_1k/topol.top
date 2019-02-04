@@ -1,0 +1,8 @@
+#include "gromos53a6.ff/forcefield.itp"
+#include "/home/mi/benjaminkahl/sm_bash/base/mols/ethane/ethane_unitedAtom.itp"
+
+[ system ]
+ethane_1k
+
+[ molecules ]
+4N3R	1000

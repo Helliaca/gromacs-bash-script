@@ -1,0 +1,13 @@
+tolerance 2.0
+filetype pdb
+output base/setups/hexane_5_decane_5/hexane_5_decane_5.pdb
+
+structure base/mols/hexane/hexane_1.pdb
+	  number 5
+	  inside box 0. 0. 0. 50.0 50.0 50.0
+	end structure
+
+structure base/mols/decane/decane_unitedAtom_optimised.pdb
+	  number 5
+	  inside box 0. 0. 0. 50.0 50.0 50.0
+	end structure

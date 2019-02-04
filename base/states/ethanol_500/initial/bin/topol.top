@@ -1,0 +1,8 @@
+#include "/home/mi/benjaminkahl/sm_bash/includes/gromos54a7_atb/forcefield.itp"
+#include "/home/mi/benjaminkahl/sm_bash/base/mols/ethanol/ethanol_unitedAtom.itp"
+
+[ system ]
+ethanol_500
+
+[ molecules ]
+OZL8	500
