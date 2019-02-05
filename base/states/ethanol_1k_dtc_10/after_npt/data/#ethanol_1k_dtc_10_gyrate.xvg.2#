@@ -1,4 +1,4 @@
-# This file was created Tue Feb  5 01:06:02 2019
+# This file was created Mon Feb  4 20:36:34 2019
 # Created by:
 #                      :-) GROMACS - gmx gyrate, 2016.1 (-:
 # 
@@ -6,10 +6,10 @@
 # Data prefix:  /usr
 # Working dir:  /home/mi/benjaminkahl/sm_bash/base/states/ethanol_1k_dtc_10/after_npt
 # Command line:
-#   gmx gyrate -f ethanol_1k_dtc_10_o.xtc -s ethanol_1k_dtc_10.tpr -o data/ethanol_1k_dtc_10_gyrate.xvg
+#   gmx gyrate -f ethanol1k_dtc_10_o.xtc -s ethanol_1k_dtc_10.tpr -o data/ethanol_1k_dtc_10_gyrate.xvg
 # gmx gyrate is part of G R O M A C S:
 #
-# GRoups of Organic Molecules in ACtion for Science
+# Glycine aRginine prOline Methionine Alanine Cystine Serine
 #
 @    title "Radius of gyration (total and around axes)"
 @    xaxis  label "Time (ps)"
