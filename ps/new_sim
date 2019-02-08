@@ -1,17 +1,17 @@
 #!/bin/bash
 
 
-#Get Name of itp file (is this even necessary?)
+#Get Name of itp file
 ./ps/file_select "base/mols/" ".itp"
 ITP="$( cat coms.txt )"
 ITP="$( realpath $ITP )"
-echo "Selected FIle: $ITP"
+echo "Selected File: $ITP"
 
 
 #Get name of pdb file
 ./ps/file_select "base/mols" ".pdb"
 PDB="$( cat coms.txt )"
-echo "Selected FIle: $PDB"
+echo "Selected File: $PDB"
 
 
 #Get itp molecule tag
@@ -25,7 +25,7 @@ read MOL_AMOUNT
 
 
 #Get Box Size (pure.inp units)
-echo "Enter Box Size (usually 50)"
+echo "Enter Box Size (unit: Angstrom, default: 50)"
 read BOX_SIZE
 
 
@@ -49,7 +49,7 @@ structure $PDB
   inside box 0. 0. 0. ${BOX_SIZE}.0 ${BOX_SIZE}.0 ${BOX_SIZE}.0
 end structure" > base/setups/${NAME}/pure.inp
 
-echo "You may edit pure.inp now. Press enter to run packmol."
+echo "Press enter to run packmol."
 read NOTHING
 
 #Use packmol

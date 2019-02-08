@@ -4,16 +4,16 @@ echo "Select Simulation State Directory:"
 ./ps/directory_select "base/states/" 1
 SIM_PATH="$( cat coms.txt )"
 SIM="$( basename $SIM_PATH )"
-echo "Selected FIle: $SIM_PATH"
+echo "Selected File: $SIM_PATH"
 
 echo "Select Simulation State Directory:"
 ./ps/directory_select $SIM_PATH 1
 STATE_PATH="$( cat coms.txt )"
-echo "Selected FIle: $STATE_PATH"
+echo "Selected File: $STATE_PATH"
 
 mkdir ${STATE_PATH}/data
 
-echo "Run what?"
+echo "Select Analysis Command:"
 options=("Gmx Energy" "Gmx Density" "Gyration Radius" "Polystat")
 select opt in "${options[@]}"
 do

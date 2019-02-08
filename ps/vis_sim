@@ -6,7 +6,7 @@ SIM="$( basename $SIM_PATH )"
 ./ps/directory_select $SIM_PATH 1
 STATE_PATH="$( cat coms.txt )"
 
-echo "Run what?"
+echo "Select Visualization Mode:"
 options=("Xmgrace Energy" "Xmgrace Density" "Vdm State" "Vdm Movie" "Trjconv")
 select opt in "${options[@]}"
 do

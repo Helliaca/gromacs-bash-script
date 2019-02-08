@@ -2,7 +2,7 @@
 
 DIR=$1
 DEPTH=$2
-echo "Please select a Disrectory from $DIR:"
+echo ">> Select directory from $DIR:"
 options=( $(find $DIR -maxdepth $DEPTH -type d ! -path $DIR) )
 
 select opt in "${options[@]}" "Quit" ; do 
@@ -14,6 +14,6 @@ select opt in "${options[@]}" "Quit" ; do
         break
 
     else
-        echo "Invalid option. Try another one."
+        echo "Invalid option."
     fi
 done

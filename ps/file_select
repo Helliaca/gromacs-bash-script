@@ -2,7 +2,7 @@
 
 DIR=$1
 EXT=$2
-echo "Please select a $EXT file from $DIR:"
+echo ">> Select $EXT file from $DIR:"
 options=( $(find $DIR -name "*$EXT") )
 
 select opt in "${options[@]}" "Quit" ; do 
@@ -14,6 +14,6 @@ select opt in "${options[@]}" "Quit" ; do
         break
 
     else
-        echo "Invalid option. Try another one."
+        echo "Invalid option."
     fi
 done

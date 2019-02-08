@@ -1,20 +1,20 @@
 #!/bin/bash
 
 
-echo "Select Simulation State Directory:"
+echo "Select Simulation Directory:"
 ./ps/directory_select "base/states/" 1
 SIM_PATH="$( cat coms.txt )"
 SIM="$( basename $SIM_PATH )"
-echo "Selected FIle: $SIM_PATH"
+echo "Selected File: $SIM_PATH"
 
 echo "Select Simulation State Directory:"
 ./ps/directory_select $SIM_PATH 1
 STATE_PATH="$( cat coms.txt )"
-echo "Selected FIle: $STATE_PATH"
+echo "Selected File: $STATE_PATH"
 
 ./ps/file_select "base/procs/" ".mdp"
 PROC="$( cat coms.txt )"
-echo "Selected FIle: $PROC"
+echo "Selected File: $PROC"
 
 echo "Enter New State Name:"
 read NEW_STATE
