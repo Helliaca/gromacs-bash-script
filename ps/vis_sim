@@ -7,27 +7,32 @@ SIM="$( basename $SIM_PATH )"
 STATE_PATH="$( cat coms.txt )"
 
 echo "Select Visualization Mode:"
-options=("Xmgrace Energy" "Xmgrace Density" "Vdm State" "Vdm Movie" "Trjconv")
+options=("Xmgrace Energy" "Xmgrace Density" "Vmd State" "Vmd Movie" "Trjconv")
 select opt in "${options[@]}"
 do
 case $opt in
-	"Vdm State")
+	"Vmd State")
 		vmd ${STATE_PATH}/${SIM}.gro
+		break
 		;;
-	"Vdm Movie")
+	"Vmd Movie")
 		vmd ${STATE_PATH}/${SIM}.gro ${STATE_PATH}/${SIM}.xtc
+		break
 		;;
 	"Xmgrace Energy")
 		xmgrace ${STATE_PATH}/data/${SIM}_energy.xvg
+		break
 		;;
 	"Xmgrace Density")
 		xmgrace ${STATE_PATH}/data/${SIM}_density.xvg
+		break
 		;;
 	"Trjconv")
 		gmx trjconv -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/${SIM}.xtc -pbc whole
+		break
 		;;
 	*)
-		echo "invalid in"
+		echo "invalid input"
 		;;
 esac
 done

@@ -20,15 +20,19 @@ do
 case $opt in
 	"Gmx Energy")
 		gmx energy -f ${STATE_PATH}/${SIM}.edr -o ${STATE_PATH}/data/${SIM}_energy
+		break
 		;;
 	"Gmx Density")
 		gmx density -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_density
+		break
 		;;
 	"Gyration Radius")
 		gmx gyrate -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_gyrate
+		break
 		;;
 	"Polystat")
 		gmx polystat -f ${STATE_PATH}/${SIM}.xtc -s ${STATE_PATH}/${SIM}.tpr -o ${STATE_PATH}/data/${SIM}_polystat
+		break
 		;;
 	*)
 		echo "invalid in"

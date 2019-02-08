@@ -1,26 +1,39 @@
 #!/bin/bash
 
 msg='Enter your choice'
-options=("Setup new Simulation" "Run Simulation" "Analyze Results" "Visualize Results")
+options=("Setup new Simulation" "Set up multi-molecule simulation" "Run Simulation" "Analyze Results" "Visualize Results" "Exit")
 
 echo $msg
 select opt in "${options[@]}"
 do
 case $opt in
-	"Setup new Simulation")
+	"Set up new simulation")
 		"ps/new_sim"
+		break
+		;;
+	"Set up multi-molecule simulation")
+		"ps/new_mm_sim"
+		break
 		;;
 	"Run Simulation")
 		"ps/run_sim"
+		break
 		;;
 	"Analyze Results")
 		"ps/anl_sim"
+		break
 		;;
 	"Visualize Results")
 		"ps/vis_sim"
+		break
+		;;
+	"Exit")
+		break
 		;;
 	*)
-		echo "invalid in"
+		echo "invalid input"
 		;;
 esac
 done
+
+echo "GPS closed."
