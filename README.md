@@ -12,3 +12,5 @@ Simply run `$/ bash main` and select your prefered option.
 
 The results of all executed simulations are located in `base/states`.
 
+![dtc](https://i.imgur.com/lqMhd7c.jpg)
+
